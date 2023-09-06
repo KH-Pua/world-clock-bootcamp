@@ -1,15 +1,36 @@
 import React from "react";
-import logo from "./logo.png";
 import "./App.css";
+import Clock from "./components/clock.js";
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {};
+  }
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <h1>World Clock Project</h1>
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            <Clock timeZone="America/New_York" />
+          </p>
+          <p>
+            <Clock timeZone="Europe/London" />
+          </p>
+          <p>
+            <Clock timeZone="Asia/Dubai" />
+          </p>
+          <p>
+            <Clock timeZone="Asia/Singapore" />
+          </p>
+          <p>
+            <Clock timeZone="Asia/Hong_Kong" />
+          </p>
+          <p>
+            <Clock timeZone="Asia/Seoul" />
           </p>
         </header>
       </div>
